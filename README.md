@@ -4,7 +4,7 @@ AN AI-powered agricultural advisor that helps farmers select optimal crops based
 
 ## 🎥 Demo
 
-![App Demo](demo.webp)
+![App Demo](screen.png)
 
 ## 🚀 Features
 
