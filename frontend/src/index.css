@@ -1,0 +1,146 @@
+:root {
+  --bg-color: #121212;
+  --surface-color: #1e1e1e;
+  --primary-color: #bb86fc;
+  --secondary-color: #03dac6;
+  --text-color: #e0e0e0;
+  --glass-bg: rgba(30, 30, 30, 0.7);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  height: 90vh;
+  width: 100%;
+}
+
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: var(--glass-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: var(--primary-color);
+  color: #000;
+  border-bottom-right-radius: 2px;
+}
+
+.message.model {
+  align-self: flex-start;
+  background-color: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom-left-radius: 2px;
+}
+
+.input-area {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary-color);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Visualization Styles */
+.viz-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-color);
+}
+
+.loading {
+  font-style: italic;
+  opacity: 0.7;
+}
