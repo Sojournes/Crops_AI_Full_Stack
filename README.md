@@ -4,7 +4,7 @@ AN AI-powered agricultural advisor that helps farmers select optimal crops based
 
 ## 🎥 Demo
 
-![App Demo](/C:/Users/diwak/.gemini/antigravity/brain/052075fc-85c5-450a-a9c7-cb56074faf52/crops_ai_demo_success_1765058103945.webp)
+![App Demo](demo.webp)
 
 ## 🚀 Features
 
